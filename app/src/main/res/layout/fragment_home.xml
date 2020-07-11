@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.homeFragment.HomeFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="30dp"
+            android:orientation="horizontal"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:layout_weight="1"
+                android:background="@color/colorPrimaryDark"
+                android:ems="10"
+                android:gravity="center"
+                android:text="类型"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textSize2" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/colorPrimaryDark"
+                android:ems="10"
+                android:gravity="center"
+                android:text="数据"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textSize2" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/soli_tem_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="10dp"
+
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/text_soli_tem"
+                android:textSize="@dimen/textSize2" />
+
+            <TextView
+                android:id="@+id/soli_tem_data_tv"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:maxLength="8"
+                android:text="- -"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/textSize2" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/soli_hum_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="10dp"
+
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/text_soli_hum"
+                android:textSize="@dimen/textSize2" />
+
+            <TextView
+                android:id="@+id/soli_hum_data_tv"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:maxLength="8"
+                android:text="- -"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/textSize2" />
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="#22000000" />
+
+        <LinearLayout
+            android:id="@+id/fishtank_tem_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="10dp"
+
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/text_fishtank_tem"
+                android:textSize="@dimen/textSize2" />
+
+            <TextView
+                android:id="@+id/fishtank_tem_data_tv"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:maxLength="8"
+                android:text="- -"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/textSize2" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/fishtank_ph_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="10dp"
+
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/text_fishtank_PH"
+                android:textSize="@dimen/textSize2" />
+
+            <TextView
+                android:id="@+id/fishtank_ph_data_tv"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:maxLength="8"
+                android:text="- -"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/textSize2" />
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="#22000000" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="喂食"
+            android:textSize="@dimen/textSize2" />
+
+        <!--喂食选择器-->
+        <com.example.gzgj_iotvideoplatform.view.AmountView
+            android:id="@+id/amount_view"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:layout_centerInParent="true"
+            android:layout_gravity="right"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="15dp"
+            app:btnTextSize="14sp"
+            app:btnWidth="36dp"
+            app:tvWidth="50dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">gzgj_ioTvideoplatform</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+
+    <string name="text_soli_tem">土壤温度</string>
+    <string name="text_soli_hum">土壤湿度</string>
+    <string name="text_fishtank_tem">鱼缸温度</string>
+    <string name="text_fishtank_PH">鱼缸PH值</string>
+</resources>
