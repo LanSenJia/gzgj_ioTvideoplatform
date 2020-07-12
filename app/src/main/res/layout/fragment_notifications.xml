@@ -1,94 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".ui.notifications.NotificationsFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#2e4e7e"
+        app:navigationIcon="@mipmap/ic_mechanical_arm"
+        app:title="机械手臂"
+        app:titleTextColor="@color/white" />
+
 
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="200dp"
         android:scaleType="centerCrop"
-        android:src="@mipmap/image_roboticarm" />
+        android:src="@mipmap/image_arm" />
 
     <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:orientation="vertical">
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp">
 
-        <LinearLayout
-            android:id="@+id/directionup_image_ll"
+        <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_centerInParent="true"
+            android:src="@mipmap/image_robotarm" />
 
-            <ImageView
-
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@mipmap/ic_directionup"
-                android:visibility="invisible" />
-
-            <ImageView
-                android:id="@+id/directionup_image"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@mipmap/ic_directionup" />
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:id="@+id/directiondown_image_ll"
+        <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/directionleftandright_image_image_ll"
-            android:orientation="horizontal">
+            android:background="@drawable/bg_button_focused"
+            android:text="前移"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/textSize2" />
 
-            <ImageView
-
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@mipmap/ic_directionup"
-                android:visibility="invisible" />
-
-            <ImageView
-                android:id="@+id/directiondown_image"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-
-                android:src="@mipmap/ic_directiondown" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/directionleftandright_image_image_ll"
+        <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/directionup_image_ll"
-            android:orientation="horizontal">
+            android:layout_alignParentRight="true"
+            android:background="@drawable/bg_button_focused"
+            android:text="后移"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/textSize2" />
 
-            <ImageView
-                android:id="@+id/directionleft_image"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@mipmap/ic_directionleft" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/bg_button_focused"
 
-            <ImageView
+            android:text="抓取"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/textSize2" />
 
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@mipmap/ic_directionup"
-                android:visibility="invisible" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/bg_button_focused"
+            android:text="放下"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/textSize2" />
 
-            <ImageView
-                android:id="@+id/directionright_image"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@mipmap/ic_directionright" />
-
-        </LinearLayout>
     </RelativeLayout>
 
 
-</RelativeLayout>
+</LinearLayout>

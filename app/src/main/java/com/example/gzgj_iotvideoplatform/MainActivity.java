@@ -18,11 +18,9 @@ public class MainActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-//        StatusBarUtil.setColor(MainActivity.this, Color.parseColor("#0099CC"));
-//        StatusBarUtil.setTranslucent(MainActivity.this);
+
         BottomNavigationView navView = findViewById(R.id.nav_view);
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
+      //底部导航栏
         AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
                 R.id.navigation_home, R.id.navigation_dashboard, R.id.navigation_notifications)
                 .build();
@@ -33,6 +31,7 @@ public class MainActivity extends BaseActivity {
             getSupportActionBar().hide();
         }
 
+        
 
     }
 

@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">gzgj_ioTvideoplatform</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_home">主页</string>
+    <string name="title_dashboard">监控视频</string>
+    <string name="title_notifications">机械臂</string>
 
     <string name="text_soli_tem">土壤温度</string>
     <string name="text_soli_hum">土壤湿度</string>

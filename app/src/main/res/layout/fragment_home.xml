@@ -21,8 +21,8 @@
                 android:id="@+id/underwaterpicture_img"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
-                android:scaleType="center"
-                android:src="@drawable/image_underwaterpicture" />
+                android:scaleType="centerCrop"
+                android:src="@mipmap/image_underwaterpicture" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -104,6 +104,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+
                 android:orientation="vertical">
 
 
@@ -130,6 +131,7 @@
                         android:layout_toRightOf="@id/ic_solitem_img"
                         android:gravity="center"
                         android:text="@string/text_soli_tem"
+                        android:textColor="#0099CC"
                         android:textSize="@dimen/textSize2" />
 
                     <TextView
@@ -137,6 +139,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="40dp"
                         android:layout_alignParentRight="true"
+                        android:layout_marginRight="20dp"
                         android:gravity="center"
                         android:maxLength="8"
                         android:text="- -"
@@ -169,6 +172,7 @@
                         android:layout_toRightOf="@id/ic_solihum"
                         android:gravity="center"
                         android:text="@string/text_soli_hum"
+                        android:textColor="#0099CC"
                         android:textSize="@dimen/textSize2" />
 
                     <TextView
@@ -176,6 +180,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="40dp"
                         android:layout_alignParentRight="true"
+                        android:layout_marginRight="20dp"
                         android:gravity="center"
                         android:maxLength="8"
                         android:text="- -"
@@ -208,6 +213,7 @@
                         android:layout_toRightOf="@id/ic_fishtank_tem_img"
                         android:gravity="center"
                         android:text="@string/text_fishtank_tem"
+                        android:textColor="#0099CC"
                         android:textSize="@dimen/textSize2" />
 
                     <TextView
@@ -215,6 +221,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="40dp"
                         android:layout_alignParentRight="true"
+                        android:layout_marginRight="20dp"
                         android:gravity="center"
                         android:maxLength="8"
                         android:text="- -"
@@ -247,6 +254,7 @@
                         android:layout_toRightOf="@id/ic_fishtank_ph_img"
                         android:gravity="center"
                         android:text="@string/text_fishtank_PH"
+                        android:textColor="#0099CC"
                         android:textSize="@dimen/textSize2" />
 
                     <TextView
@@ -254,6 +262,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="40dp"
                         android:layout_alignParentRight="true"
+                        android:layout_marginRight="20dp"
                         android:gravity="center"
                         android:maxLength="8"
                         android:text="- -"
@@ -290,6 +299,7 @@
                     android:layout_marginLeft="5dp"
                     android:gravity="center"
                     android:text="喂食"
+                    android:textColor="#3366CC"
                     android:textSize="@dimen/textSize2" />
 
                 <!--喂食选择器-->
@@ -311,6 +321,7 @@
                     android:layout_height="match_parent"
                     android:gravity="center"
                     android:text="克"
+
                     android:textSize="@dimen/textSize2" />
 
                 <Button
@@ -318,7 +329,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
+                    android:background="@drawable/bg_button"
                     android:text="执行"
+                    android:textColor="#ffffff"
                     android:textSize="@dimen/textSize2" />
 
             </LinearLayout>
@@ -342,7 +355,7 @@
                     android:layout_marginLeft="5dp"
                     android:gravity="center"
                     android:text="定时"
-
+                    android:textColor="#3366CC"
                     android:textSize="@dimen/textSize2" />
 
                 <!--定时选择器-->
@@ -372,7 +385,6 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-
                 android:orientation="horizontal">
 
                 <EditText
@@ -386,6 +398,7 @@
 
                     android:gravity="center"
                     android:text="时"
+                    android:textColor="#3366CC"
                     android:textSize="@dimen/textSize2" />
 
                 <EditText
@@ -399,6 +412,7 @@
 
                     android:gravity="center"
                     android:text="分"
+                    android:textColor="#3366CC"
                     android:textSize="@dimen/textSize2" />
 
                 <EditText
@@ -412,6 +426,7 @@
 
                     android:gravity="center"
                     android:text="秒"
+                    android:textColor="#3366CC"
                     android:textSize="@dimen/textSize2" />
 
                 <CheckBox
@@ -423,6 +438,7 @@
                     android:layout_height="match_parent"
                     android:gravity="center"
                     android:text="是否定时喂食"
+                    android:textColor="#FF6666"
                     android:textSize="@dimen/textSize2" />
             </LinearLayout>
 
@@ -445,6 +461,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="水循环"
+                        android:textColor="#336699"
                         android:textSize="@dimen/textSize2" />
 
                     <Switch
@@ -463,6 +480,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="换水"
+                        android:textColor="#336699"
                         android:textSize="@dimen/textSize2" />
 
                     <Switch
@@ -481,6 +499,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="进水"
+                        android:textColor="#336699"
                         android:textSize="@dimen/textSize2" />
 
                     <Switch
@@ -504,7 +523,8 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="排水    "
+                        android:text="排水"
+                        android:textColor="#336699"
                         android:textSize="@dimen/textSize2" />
 
                     <Switch
@@ -523,6 +543,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="吸粪"
+                        android:textColor="#336699"
                         android:textSize="@dimen/textSize2" />
 
                     <Switch
@@ -541,6 +562,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="供养"
+                        android:textColor="#336699"
                         android:textSize="@dimen/textSize2" />
 
                     <Switch
@@ -559,6 +581,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="浇花"
+                        android:textColor="#336699"
                         android:textSize="@dimen/textSize2" />
 
                     <Switch
