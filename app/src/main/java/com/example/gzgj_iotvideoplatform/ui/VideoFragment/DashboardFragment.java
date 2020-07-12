@@ -45,6 +45,9 @@ public class DashboardFragment extends Fragment implements SurfaceHolder.Callbac
                 ViewModelProviders.of(this).get(DashboardViewModel.class);
         View root = inflater.inflate(R.layout.fragment_dashboard, container, false);
 
+        initView(root);
+        initData(root);
+
         return root;
     }
 
