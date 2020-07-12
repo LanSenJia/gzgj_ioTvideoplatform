@@ -7,334 +7,570 @@
     android:orientation="vertical"
     tools:context=".ui.homeFragment.HomeFragment">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1">
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:src="@drawable/image_underwaterpicture" />
-
-    </RelativeLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="2"
+        android:layout_height="wrap_content"
         android:orientation="vertical">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-
-            <LinearLayout
-                android:id="@+id/soli_tem_ll"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-
-                android:layout_marginTop="10dp"
-
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="40dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="@string/text_soli_tem"
-                    android:textSize="@dimen/textSize2" />
-
-                <TextView
-                    android:id="@+id/soli_tem_data_tv"
-                    android:layout_width="0dp"
-                    android:layout_height="40dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:maxLength="8"
-                    android:text="- -"
-                    android:textColor="@color/gray"
-                    android:textSize="@dimen/textSize2" />
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/soli_hum_ll"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-
-                android:layout_marginTop="10dp"
-
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="40dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="@string/text_soli_hum"
-                    android:textSize="@dimen/textSize2" />
-
-                <TextView
-                    android:id="@+id/soli_hum_data_tv"
-                    android:layout_width="0dp"
-                    android:layout_height="40dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:maxLength="8"
-                    android:text="- -"
-                    android:textColor="@color/gray"
-                    android:textSize="@dimen/textSize2" />
-
-
-            </LinearLayout>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="5dp"
-                android:background="#22000000" />
-
-            <LinearLayout
-                android:id="@+id/fishtank_tem_ll"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-
-                android:layout_marginTop="10dp"
-
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="40dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="@string/text_fishtank_tem"
-                    android:textSize="@dimen/textSize2" />
-
-                <TextView
-                    android:id="@+id/fishtank_tem_data_tv"
-                    android:layout_width="0dp"
-                    android:layout_height="40dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:maxLength="8"
-                    android:text="- -"
-                    android:textColor="@color/gray"
-                    android:textSize="@dimen/textSize2" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/fishtank_ph_ll"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-
-                android:layout_marginTop="10dp"
-
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="40dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="@string/text_fishtank_PH"
-                    android:textSize="@dimen/textSize2" />
-
-                <TextView
-                    android:id="@+id/fishtank_ph_data_tv"
-                    android:layout_width="0dp"
-                    android:layout_height="40dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:maxLength="8"
-                    android:text="- -"
-                    android:textColor="@color/gray"
-                    android:textSize="@dimen/textSize2" />
-
-
-            </LinearLayout>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="5dp"
-                android:background="#22000000" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:layout_marginLeft="60dp"
-                android:gravity="center"
-                android:text="喂食"
-
-                android:textSize="@dimen/textSize2" />
-
-            <!--喂食选择器-->
-            <com.example.gzgj_iotvideoplatform.view.AmountView
-                android:id="@+id/feed_amount"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-
-                android:layout_centerInParent="true"
-                android:layout_gravity="right"
-                android:layout_marginLeft="30dp"
-                android:layout_marginRight="15dp"
-                app:btnTextSize="14sp"
-                app:btnWidth="36dp"
-                app:tvWidth="50dp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:text="克"
-                android:textSize="@dimen/textSize2" />
-
-            <Button
-                android:id="@+id/feed_btn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:text="执行"
-                android:textSize="@dimen/textSize2" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:layout_marginLeft="60dp"
-                android:gravity="center"
-                android:text="定时"
-
-                android:textSize="@dimen/textSize2" />
-
-            <!--定时选择器-->
-            <com.example.gzgj_iotvideoplatform.view.AmountView
-                android:id="@+id/timing_amount"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-
-                android:layout_centerInParent="true"
-                android:layout_gravity="right"
-                android:layout_marginLeft="30dp"
-                android:layout_marginRight="15dp"
-                app:btnTextSize="14sp"
-                app:btnWidth="36dp"
-                app:tvWidth="50dp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:text="天"
-                android:textSize="@dimen/textSize2" />
-
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-
-            android:orientation="horizontal">
-
-            <EditText
-                android:layout_width="36dp"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="40dp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-
-                android:gravity="center"
-                android:text="时"
-                android:textSize="@dimen/textSize2" />
-
-            <EditText
-                android:layout_width="36dp"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="5dp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-
-                android:gravity="center"
-                android:text="分"
-                android:textSize="@dimen/textSize2" />
-
-            <EditText
-                android:layout_width="36dp"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="5dp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-
-                android:gravity="center"
-                android:text="秒"
-                android:textSize="@dimen/textSize2" />
-
-            <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:text="是否定时喂食"
-                android:textSize="@dimen/textSize2" />
-        </LinearLayout>
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="5dp"
-            android:background="#22000000" />
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="200dp">
+
+            <ImageView
+                android:id="@+id/underwaterpicture_img"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="center"
+                android:src="@drawable/image_underwaterpicture" />
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="#0099CC"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="当前水温"
+                        android:textColor="#ffffff"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:gravity="center"
+                        android:text="19"
+                        android:textColor="#ffffff"
+                        android:textSize="@dimen/textSize2" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:gravity="center"
+                        android:text="℃"
+                        android:textColor="#ffffff"
+                        android:textSize="@dimen/textSize2" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:gravity="right">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="当前时间"
+                        android:textColor="#ffffff"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/currenttime_data_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="19：20"
+                        android:textColor="#ffffff"
+                        android:textSize="@dimen/textSize2" />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <RelativeLayout
+                    android:id="@+id/soli_tem_rl"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/ic_solitem_img"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/ic_solitem" />
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@id/ic_solitem_img"
+                        android:gravity="center"
+                        android:text="@string/text_soli_tem"
+                        android:textSize="@dimen/textSize2" />
+
+                    <TextView
+                        android:id="@+id/soli_tem_data_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_alignParentRight="true"
+                        android:gravity="center"
+                        android:maxLength="8"
+                        android:text="- -"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/textSize2"
+                        tools:ignore="RtlHardcoded" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/soli_hum_rl"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/ic_solihum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/ic_solihum" />
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@id/ic_solihum"
+                        android:gravity="center"
+                        android:text="@string/text_soli_hum"
+                        android:textSize="@dimen/textSize2" />
+
+                    <TextView
+                        android:id="@+id/soli_hum_data_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_alignParentRight="true"
+                        android:gravity="center"
+                        android:maxLength="8"
+                        android:text="- -"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/textSize2"
+                        tools:ignore="RtlHardcoded" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/fishtank_tem_rl"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/ic_fishtank_tem_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/ic_finshtem" />
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@id/ic_fishtank_tem_img"
+                        android:gravity="center"
+                        android:text="@string/text_fishtank_tem"
+                        android:textSize="@dimen/textSize2" />
+
+                    <TextView
+                        android:id="@+id/fishtank_tem_data_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_alignParentRight="true"
+                        android:gravity="center"
+                        android:maxLength="8"
+                        android:text="- -"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/textSize2"
+                        tools:ignore="RtlHardcoded" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/fishtank_ph_rl"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/ic_fishtank_ph_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/ic_ph" />
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@id/ic_fishtank_ph_img"
+                        android:gravity="center"
+                        android:text="@string/text_fishtank_PH"
+                        android:textSize="@dimen/textSize2" />
+
+                    <TextView
+                        android:id="@+id/fishtank_ph_data_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_alignParentRight="true"
+                        android:gravity="center"
+                        android:maxLength="8"
+                        android:text="- -"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/textSize2"
+                        tools:ignore="RtlHardcoded" />
+
+
+                </RelativeLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:background="#22000000" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-                <TextView
+                <ImageView
+
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="水循环"
+                    android:padding="5dp"
+                    android:src="@mipmap/ic_feed" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+
+                    android:layout_marginLeft="5dp"
+                    android:gravity="center"
+                    android:text="喂食"
                     android:textSize="@dimen/textSize2" />
 
-                <Switch
+                <!--喂食选择器-->
+                <com.example.gzgj_iotvideoplatform.view.AmountView
+                    android:id="@+id/feed_amount"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="match_parent"
+
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="15dp"
+                    app:btnTextSize="14sp"
+                    app:btnWidth="36dp"
+                    app:tvWidth="50dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="克"
+                    android:textSize="@dimen/textSize2" />
+
+                <Button
+                    android:id="@+id/feed_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="执行"
+                    android:textSize="@dimen/textSize2" />
 
             </LinearLayout>
 
-        </RelativeLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
 
+                android:orientation="horizontal">
+
+                <ImageView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:src="@mipmap/ic_timing" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="center"
+                    android:text="定时"
+
+                    android:textSize="@dimen/textSize2" />
+
+                <!--定时选择器-->
+                <com.example.gzgj_iotvideoplatform.view.AmountView
+                    android:id="@+id/timing_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="15dp"
+                    app:btnTextSize="14sp"
+                    app:btnWidth="36dp"
+                    app:tvWidth="50dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="天"
+                    android:textSize="@dimen/textSize2" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:orientation="horizontal">
+
+                <EditText
+                    android:layout_width="36dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="40dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+
+                    android:gravity="center"
+                    android:text="时"
+                    android:textSize="@dimen/textSize2" />
+
+                <EditText
+                    android:layout_width="36dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+
+                    android:gravity="center"
+                    android:text="分"
+                    android:textSize="@dimen/textSize2" />
+
+                <EditText
+                    android:layout_width="36dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+
+                    android:gravity="center"
+                    android:text="秒"
+                    android:textSize="@dimen/textSize2" />
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="是否定时喂食"
+                    android:textSize="@dimen/textSize2" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="#22000000" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="水循环"
+                        android:textSize="@dimen/textSize2" />
+
+                    <Switch
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="换水"
+                        android:textSize="@dimen/textSize2" />
+
+                    <Switch
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="进水"
+                        android:textSize="@dimen/textSize2" />
+
+                    <Switch
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="排水    "
+                        android:textSize="@dimen/textSize2" />
+
+                    <Switch
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="吸粪"
+                        android:textSize="@dimen/textSize2" />
+
+                    <Switch
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="供养"
+                        android:textSize="@dimen/textSize2" />
+
+                    <Switch
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="浇花"
+                        android:textSize="@dimen/textSize2" />
+
+                    <Switch
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
     </LinearLayout>
+
 
 </LinearLayout>

@@ -6,7 +6,7 @@ import android.os.PersistableBundle;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.gzgj_iotvideoplatform.uitls.StatusBarUtil;
+import com.jaeger.library.StatusBarUtil;
 
 /**
  * @Create by lansen

@@ -38,4 +38,6 @@ dependencies {
     /*萤石SDK核心模块，必须依赖*/
     implementation 'com.ezviz.sdk:ezviz-sdk:4.13.0'
 
+    implementation 'com.jaeger.statusbarutil:library:1.5.1'
+
 }

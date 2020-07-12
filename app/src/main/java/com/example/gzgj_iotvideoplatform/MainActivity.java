@@ -1,11 +1,12 @@
 package com.example.gzgj_iotvideoplatform;
 
+import android.graphics.Color;
 import android.os.Bundle;
 
 import com.example.gzgj_iotvideoplatform.ui.BaseActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.jaeger.library.StatusBarUtil;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -17,6 +18,8 @@ public class MainActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+//        StatusBarUtil.setColor(MainActivity.this, Color.parseColor("#0099CC"));
+//        StatusBarUtil.setTranslucent(MainActivity.this);
         BottomNavigationView navView = findViewById(R.id.nav_view);
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
@@ -29,6 +32,8 @@ public class MainActivity extends BaseActivity {
         if (getSupportActionBar() != null) {
             getSupportActionBar().hide();
         }
+
+
     }
 
 }
