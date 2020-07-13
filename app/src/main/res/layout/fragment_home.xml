@@ -15,96 +15,42 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="200dp">
+            android:layout_height="330dp">
 
-            <ImageView
-                android:id="@+id/underwaterpicture_img"
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:scaleType="centerCrop"
-                android:src="@mipmap/image_underwaterpicture" />
 
-            <LinearLayout
+            <SurfaceView
+                android:id="@+id/video_play_sv"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="300dp"
+                android:background="@color/transparent" />
+
+
+            <include
+                layout="@layout/ez_play_control"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
                 android:layout_alignParentBottom="true"
-                android:background="#0099CC"
-                android:orientation="horizontal"
-                android:padding="10dp">
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:text="当前水温"
-                        android:textColor="#ffffff"
-                        android:textSize="16sp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="5dp"
-                        android:gravity="center"
-                        android:text="19"
-                        android:textColor="#ffffff"
-                        android:textSize="@dimen/textSize2" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="3dp"
-                        android:gravity="center"
-                        android:text="℃"
-                        android:textColor="#ffffff"
-                        android:textSize="@dimen/textSize2" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="10dp"
-                    android:layout_weight="1"
-                    android:gravity="right">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:text="当前时间"
-                        android:textColor="#ffffff"
-                        android:textSize="16sp" />
-
-                    <TextView
-                        android:id="@+id/currenttime_data_tv"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:text="19：20"
-                        android:textColor="#ffffff"
-                        android:textSize="@dimen/textSize2" />
+                android:layout_marginBottom="2dp" />
 
 
-                </LinearLayout>
-
-
-            </LinearLayout>
         </RelativeLayout>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="60dp"
+        android:fillViewport="true">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-
             android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-
                 android:orientation="vertical">
 
 
@@ -449,7 +395,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="wrap_content">
 
                 <LinearLayout
                     android:layout_width="0dp"
@@ -512,7 +458,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="wrap_content">
 
                 <LinearLayout
                     android:layout_width="0dp"
@@ -593,7 +539,8 @@
             </LinearLayout>
 
         </LinearLayout>
-    </LinearLayout>
+
+    </ScrollView>
 
 
 </LinearLayout>
