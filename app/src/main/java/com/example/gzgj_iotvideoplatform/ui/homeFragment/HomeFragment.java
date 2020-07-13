@@ -99,6 +99,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener, Surf
                 Log.i(TAG, "handleMessage:  调用成功");
                 break;
             case EZConstants.EZRealPlayConstants.MSG_REALPLAY_PLAY_FAIL:
+
                 //播放失败,得到失败信息
                 ErrorInfo errorinfo = (ErrorInfo) msg.obj;
                 //得到播放失败错误码
@@ -109,6 +110,8 @@ public class HomeFragment extends Fragment implements View.OnClickListener, Surf
                 String description = errorinfo.description;
                 //得到播放失败解决方方案
                 description = errorinfo.sulution;
+                Log.e(TAG, "handleMessage: " + "调用失败，失败信息" +
+                        errorinfo + "  失败错误码=" + codeStr + "失败描述：" + description);
                 break;
             case EZConstants.MSG_VIDEO_SIZE_CHANGED:
                 //解析出视频画面分辨率回调
@@ -128,4 +131,6 @@ public class HomeFragment extends Fragment implements View.OnClickListener, Surf
         }
         return false;
     }
+
+
 }
