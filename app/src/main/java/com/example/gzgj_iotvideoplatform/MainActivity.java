@@ -3,10 +3,13 @@ package com.example.gzgj_iotvideoplatform;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.view.ViewGroup;
 
 import com.example.gzgj_iotvideoplatform.Application.APP;
 import com.example.gzgj_iotvideoplatform.ui.BaseActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.hjq.toast.ToastUtils;
 import com.jaeger.library.StatusBarUtil;
 import com.videogo.exception.BaseException;
 
@@ -35,31 +38,35 @@ public class MainActivity extends BaseActivity {
         }
     }
 
+
+
     /**
      * 通过调用服务接口判断AppKey和AccessToken且有效
      * @return 是否依旧有效
      */
-//    private boolean checkAppKeyAndAccessToken() {
-//        boolean isValid = false;
-//        try {
-//            APP.getOpenSDK().getDeviceList(0, 1);
-//            isValid = true;
-//        } catch (BaseException e) {
-//            e.printStackTrace();
-//            Log.e("Main", "Error code is " + e.getErrorCode());
-//            int errCode = e.getErrorCode();
-//            String errMsg;
-//            switch (errCode){
-//                case 400031:
-//                    errMsg = getApplicationContext().getString(R.string.tip_of_bad_net);
-//                    break;
-//                default:
-//                    errMsg = getApplicationContext().getString(R.string.login_expire);
-//                    break;
-//            }
-//            toast(errMsg);
-//        }
-//        return isValid;
-//    }
+    private boolean checkAppKeyAndAccessToken() {
+        boolean isValid = false;
+        try {
+            APP.getOpenSDK().getDeviceList(0, 1);
+            isValid = true;
+        } catch (BaseException e) {
+            e.printStackTrace();
+            Log.e("Main", "Error code is " + e.getErrorCode());
+            int errCode = e.getErrorCode();
+            String errMsg;
+            switch (errCode){
+                case 400031:
+                    errMsg = getApplicationContext().getString(R.string.tip_of_bad_net);
+                    break;
+                default:
+                    errMsg = getApplicationContext().getString(R.string.login_expire);
+                    break;
+            }
+            ToastUtils.show(errMsg);
+        }
+        return isValid;
+    }
+
+
 
 }

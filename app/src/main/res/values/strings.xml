@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">gzgj_ioTvideoplatform</string>
+    <string name="app_name">物联网视频监控平台</string>
     <string name="title_home">主页</string>
     <string name="title_dashboard">监控视频</string>
     <string name="title_notifications">机械臂</string>
@@ -8,4 +8,8 @@
     <string name="text_soli_hum">土壤湿度</string>
     <string name="text_fishtank_tem">鱼缸温度</string>
     <string name="text_fishtank_PH">鱼缸PH值</string>
+    <string name="tip_of_bad_net">can not connect to server, please check your phone network!</string>
+    <string name="login_expire">invalid AppKey or AccessToken, please login again!</string>
+
+
 </resources>

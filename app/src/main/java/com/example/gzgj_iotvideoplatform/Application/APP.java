@@ -2,6 +2,7 @@ package com.example.gzgj_iotvideoplatform.Application;
 
 import android.app.Application;
 
+import com.hjq.toast.ToastUtils;
 import com.videogo.openapi.EZOpenSDK;
 
 /**
@@ -34,6 +35,8 @@ public class APP extends Application {
         EZOpenSDK.initLib(this, APP_KEY);
         //获取AccessToken
         EZOpenSDK.getInstance().setAccessToken(ACCESSTOKEN);
+
+        ToastUtils.init(this);
 
 
     }
